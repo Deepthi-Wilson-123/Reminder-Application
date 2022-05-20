@@ -1,0 +1,52 @@
+<nav class="navbar navbar-dark bg-dark">
+    <p style="color: aliceblue;">!!Reminding You Is My Duty!!</p>
+    <a style="color: aliceblue;">!!Reminding You Is My Duty!!</a>
+    <p style="color: aliceblue;">!!Reminding You Is My Duty!!</p>
+
+</nav>
+
+<body>
+
+
+    <div class="container">
+
+        <div class="col-12 col-lg-4 ">
+            
+        </div>
+        <div class="col-12 col-lg-4 ">
+            
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+                <div class="card" style="padding: 25px;">
+                    <h1>Sign In</h1>
+                    <div class="mb-3">
+                    
+                        <input formControlName="userid" type="text" name="user1" placeholder="Enter your Userid" class="form-control lg">
+                    </div>
+                    <div *ngIf="((loginForm.get('userid')?.touched) && (loginForm.get('userid')?.errors))"
+                        style="color: red;">Invalid userid</div>
+                    <div class="mb-3">
+                    
+                         <input formControlName="password" type="text" name="password1" placeholder="Enter your Password" class="form-control lg">
+                    </div>
+                    <div *ngIf="((loginForm.get('password')?.touched) && (loginForm.get('password')?.errors))"
+                        style="color: red;">Invalid Password</div>
+
+                    <button type="submit">LOGIN</button>
+                    <a href="./register" style="margin-top: 40px ;">Are you a new user!Then REGISTER</a>
+                </div>
+
+
+            </form>
+
+        </div>
+       
+        <div class="col-12 col-lg-4" >
+            <h6>DATE : {{loginDate|date:'fullDate'|uppercase}}</h6>
+        
+        </div>
+
+        
+    </div>
+    
+</body>
+

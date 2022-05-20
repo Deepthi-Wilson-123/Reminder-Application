@@ -1,0 +1,10 @@
+.table{
+    width: 500px;
+    border-color: black;
+    margin-left: 600px;
+    border-right: black;
+    border-left: black;
+    border-style: dashedh;
+    margin-top: 50px;
+    border-style: solid;
+}

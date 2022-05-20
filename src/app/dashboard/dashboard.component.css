@@ -1,0 +1,20 @@
+.card{
+    height: 400px;
+    width: 300px;
+    
+    margin-right: auto;
+    margin-top: 30px;
+    align-items: center;
+    background-color:black;
+    color: aliceblue
+    
+}
+
+button{
+    width: 150px;
+    background-color:black;
+    color: white;
+    border-style: double;
+    margin: 3px;
+
+}

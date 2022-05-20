@@ -1,0 +1,40 @@
+
+    <div class="container">
+
+        <div class="col-12 col-lg-4 ">
+            
+        </div>
+        <div class="col-12 col-lg-4 ">
+            
+            <form [formGroup]="editForm" (ngSubmit)="edit()">
+                <div class="card" style="padding: 25px;">
+                    <h1>Update</h1>
+                    <div class="mb-3">
+                    
+                        <input formControlName="eventname" type="text" name="eventname" placeholder="Enter your eventname" class="form-control lg">
+                    </div>
+                    <div *ngIf="((editForm.get('eventname')?.touched) && (editForm.get('eventname')?.errors))"
+                        style="color: red;">Invalid Name</div>
+                    <div class="mb-3">
+                    
+                         <input formControlName="eventdate" type="text" name="eventdate" placeholder="Enter your eventdate" class="form-control lg">
+                    </div>
+                    <div *ngIf="((editForm.get('eventdate')?.touched) && (editForm.get('eventdate')?.errors))"
+                        style="color: red;">Invalid Date</div>
+
+                    <button type="submit">SUBMIT</button>
+                    
+                </div>
+
+
+            </form>
+
+        </div>
+       
+        <div class="col-12 col-lg-4" >
+        
+        
+        </div>
+
+        
+    </div>

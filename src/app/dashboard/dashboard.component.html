@@ -1,0 +1,69 @@
+<nav class="navbar navbar-dark bg-dark">
+    <p style="color: aliceblue;">!!Reminding You Is My Duty!!</p>
+    <p style="color: aliceblue;">!!Reminding You Is My Duty!!</p>
+    <button (click)="delete()">DELETE</button>
+    <button (click)="logOut()">LogOut</button>
+    <app-delete-confirm></app-delete-confirm>
+
+</nav>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4 "></div>
+            <div class="col-12 col-md-4 ">
+                <form [formGroup]="eventForm" (ngSubmit)="event()">
+                    <div class="card" style="padding: 25px;">
+    
+                        <h3>Event</h3>
+                        <div class="mb-3">
+    
+                            <input type="text" name="userid" placeholder="Enter your userid" formControlName="userid"
+                                class="form-control lg">
+                        </div>
+                        <div *ngIf="((eventForm.get('userid')?.touched) && (eventForm.get('userid')?.errors))"
+                            style="color: red;">Invalid User Id</div>
+                        <div class="mb-3">
+    
+                            <input type="text" name="password" placeholder="Enter your password" formControlName="password"
+                                class="form-control lg">
+                        </div>
+                        <div *ngIf="((eventForm.get('password')?.touched) && (eventForm.get('password')?.errors))"
+                            style="color: red;">Invalid Password</div>
+    
+    
+                        <div class="mb-3">
+    
+                            <input type="text" name="eventname" placeholder="Enter Event Name" formControlName="eventname"
+                                class="form-control lg">
+                        </div>
+                        <div *ngIf="((eventForm.get('eventname')?.touched) && (eventForm.get('eventname')?.errors))"
+                            style="color: red;">Invalid Event Name</div>
+    
+                        <div class="mb-3">
+    
+                            <input type="text" name="eventdate" placeholder="Enter Event Date" formControlName="eventdate"
+                                class="form-control lg">
+                        </div>
+                        <div *ngIf="((eventForm.get('eventdate')?.touched) && (eventForm.get('eventdate')?.errors))"
+                            style="color: red;">Invalid Event Date</div>
+    
+                        <button type="submit">ADD EVENT</button>
+                        <button (click)="eventlist()">VIEW EVENTS</button>
+                    </div>
+    
+    
+                </form>
+            </div>
+    
+            <div class="col-12 col-md-4 ">
+                <h2>Welcome {{CurrentCustomer}} !!</h2>
+                <h4>DATE : {{loginDate|date:'fullDate'|uppercase}}</h4>
+               
+            </div>
+        </div>
+      
+    </div>
+
+
+</body>

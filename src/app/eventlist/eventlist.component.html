@@ -1,0 +1,32 @@
+<nav class="navbar navbar-dark bg-dark">
+    <p style="color: aliceblue;">!!Reminding You Is My Duty!!</p>
+    <p style="color: aliceblue;">COMPLETE EVENT LIST</p>
+    <button (click)="logOut()">LogOut</button>
+</nav>
+<table class="table">
+    <thead class="table-info">
+        <tr>
+            <th>Event Date</th>
+            <th>Event Name</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of eventlist" class="table-danger">
+            <th>{{e.eventdate}}</th>
+            <th>{{e.eventname}}</th>
+            <th><a class="action-btn" (click)="editEvent()"><span class="material-symbols-outlined">
+                edit
+                </span></a></th>
+            <th><a class="action-btn" (click)="deleteEvent()"><span class="material-symbols-outlined">
+                delete
+                </span></a></th>
+                
+            
+        </tr>
+
+
+
+    </tbody>
+</table>
